@@ -29,7 +29,7 @@ int _tmain(int argc, LPTSTR argv[])
 	ptrMem = (TCHAR *)MapViewOfFile(hMem, FILE_MAP_WRITE, 0, 0, sizeof(frase));
 	if (ptrMem == NULL)
 	{
-		_tprintf(TEXT("Erro ao mapear memória partilhada(%d).\n"), sizeof(frase));
+		_tprintf(TEXT("Erro ao mapear memória partilhada(%d).\n"), GetLastError());
 		return -1;
 	}
 
